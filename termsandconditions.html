@@ -413,13 +413,13 @@ display:block;
     <div class="nav-inner">
       <button class="browse-btn"><i class="uil uil-apps"></i> BROWSE CATEGORIES <i class="uil uil-angle-down"></i></button>
       <ul class="nav-links">
-        <li><a href="index.php" class="active">HOME</a></li>
-        <li><a href="bookstore.php">BOOKSTORE</a></li>
-        <li><a href="about.php">ABOUT US</a></li>
-        <li><a href="authors.php">AUTHORS</a></li>
-        <li><a href="contact.php">CONTACT US</a></li>
+        <li><a href="index.html" class="active">HOME</a></li>
+        <li><a href="bookstore.html">BOOKSTORE</a></li>
+        <li><a href="aboutus.html">ABOUT US</a></li>
+        <li><a href="authors.html">AUTHORS</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
       </ul>
-      <a href="register_seller.php" class="publish-link">PUBLISH WITH US</a>
+      <a href="register_seller.html" class="publish-link">PUBLISH WITH US</a>
     </div>
   </div>
 </nav>
@@ -427,12 +427,12 @@ display:block;
 <!-- ══ MOBILE NAV ══ -->
 <div class="mobile-nav" id="mobileNav">
   <button class="mob-nav-close" onclick="closeMobNav()"><i class="uil uil-times"></i></button>
-  <a href="index.php">Home</a>
-  <a href="bookstore.php">Bookstore</a>
-  <a href="about.php">About Us</a>
-  <a href="authors.php">Authors</a>
-  <a href="contact.php">Contact Us</a>
-  <a href="register_seller.php" style="color:var(--gold)">Publish With Us</a>
+  <a href="index.html">Home</a>
+  <a href="bookstore.html">Bookstore</a>
+  <a href="aboutus.html">About Us</a>
+  <a href="authors.html">Authors</a>
+  <a href="contact.html">Contact Us</a>
+  <a href="register_seller.html" style="color:var(--gold)">Publish With Us</a>
 </div>
 
 

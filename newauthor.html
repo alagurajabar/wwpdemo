@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,7 +36,8 @@ img { display:block; max-width:100%; }
 @keyframes pulse   { 0%,100%{transform:scale(1)} 50%{transform:scale(1.15)} }
 @keyframes slideL  { from{opacity:0;transform:translateX(30px)} to{opacity:1;transform:translateX(0)} }
 
-.container { width:min(1340px,94%); margin:0 auto; }
+.container { width:min(1340px,94%);
+ margin:0 auto; }
 
 /* ══ TOP BAR ══ */
 .top-bar { background:var(--cream); padding:9px 0; border-bottom:1px solid var(--sand); }
@@ -92,7 +92,12 @@ img { display:block; max-width:100%; }
 .mob-nav-toggle { display:none; background:none; border:none; color:var(--white); font-size:1.4rem; cursor:pointer; padding:8px; }
 
 /* ══ HERO ══ */
-.hero { display:grid; grid-template-columns:1.1fr 1fr; min-height:460px; }
+.hero { display:grid;
+ grid-template-columns:1fr 0.7fr;
+
+  min-height:460px;
+padding: 0 80px; 
+ }
 
 
 .hero-left{
@@ -285,172 +290,186 @@ section {
 }
 
 
-body1{
-font-family: Arial, sans-serif;
-margin:0;
-background:#f3f3f3;
+
+/* dropdown container */
+.dropdown {
+  position: relative;
 }
 
-.header1{
-background:#d8c59d;
-text-align:center;
-padding:30px;
-font-size:40px;
-font-weight:bold;
+/* hidden by default */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #0D1B2A;
+  min-width: 180px;
+  box-shadow: 0 5px 15px rgba(255, 244, 244, 0.1);
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
-.container1{
-display:flex;
-max-width:1200px;
-margin:auto;
-padding:40px;
-gap:40px;
+/* dropdown items */
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 15px;
+  color: #ffe7e7;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
-.sidebar{
-width:260px;
+.dropdown-menu li a:hover {
+  background: #545454;
 }
 
-.sidebar button{
-width:100%;
-padding:14px;
-margin-bottom:12px;
-border:none;
-background:#2c271c;
-color:white;
-border-radius:10px;
-cursor:pointer;
-font-size:15px;
+/* show on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
-.sidebar button.active{
-background:#9c8658;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Georgia", serif;
 }
 
-.content{
-flex:1;
+body {
+  background: #f5f5f5;
+  color: #1c2b33;
 }
 
-.section{
-display:none;
+.container {
+  width: 85%;
+  margin: auto;
+  max-width: 1100px;
 }
 
-.section.active{
-display:block;
+/* HERO */
+.hero {
+  background: #e6d6b8;
+  padding: 80px 0;
 }
 
-
-
-
-
-.contact-hero{
-background:#d8caa8;
-padding:120px 0;
+.hero h1 {
+  font-size: 48px;
+  margin: 15px 0;
 }
 
-.contact-container{
-width:1100px;
-margin:auto;
+.subtitle {
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #444;
 }
 
-.small-title{
-font-size:14px;
-letter-spacing:2px;
-color:#1c2a36;
-margin-bottom:20px;
+.desc {
+  max-width: 700px;
+  line-height: 1.6;
 }
 
-.contact-title{
-font-size:52px;
-font-family:serif;
-margin-bottom:20px;
-color:#1c2a36;
+/* STEPS */
+.steps {
+  padding: 80px 0;
+  text-align: center;
 }
 
-.contact-text{
-max-width:600px;
-line-height:1.7;
-color:#2d3b45;
-margin-bottom:30px;
+.steps h2 {
+  font-size: 40px;
+  margin: 10px 0 40px;
 }
 
-.contact-btn{
-display:inline-block;
-padding:14px 28px;
-background:#2d3b45;
-color:white;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;
+.step-box {
+  background: #1f2e36;
+  color: #fff;
+  padding: 30px;
+  margin: 20px 0;
+  border-radius: 12px;
+  position: relative;
+  text-align: left;
 }
 
-.contact-info{
-background:#f2f2f2;
-padding:80px 0;
+.step-number {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  background: #d4b26a;
+  color: #000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
 }
 
-.contact-grid{
-width:1100px;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:40px;
+.step-box h3 {
+  margin-bottom: 10px;
 }
 
-.contact-card{
-background:#e6e0cc;
-padding:40px;
-border-radius:10px;
-box-shadow:0 10px 20px rgba(0,0,0,0.05);
+.step-box ul {
+  padding-left: 20px;
 }
 
-.contact-card h3{
-margin-top:20px;
-margin-bottom:10px;
-font-size:22px;
+.step-box li {
+  margin: 8px 0;
 }
 
-.contact-card p{
-color:#444;
-line-height:1.6;
+/* SERVICES */
+.services {
+  padding: 80px 0;
+  text-align: center;
 }
 
-.contact-card strong{
-display:block;
-margin-top:15px;
+.services h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
 }
 
-.icon{
-font-size:28px;
-color:#c48a2a;
+.service-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
+.card {
+  background: #1f2e36;
+  color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  flex: 1;
+  min-width: 250px;
+}
 
+/* CTA */
+.cta {
+  background: #e6d6b8;
+  padding: 80px 0;
+  text-align: center;
+}
 
+.cta h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
 
-
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #1f2e36;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+}
 
 
 </style>
 </head>
 <body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- ══ TOP BAR ══ -->
 <div class="top-bar">
@@ -515,7 +534,22 @@ color:#c48a2a;
         <li><a href="index.html" class="active">HOME</a></li>
         <li><a href="bookstore.html">BOOKSTORE</a></li>
         <li><a href="aboutus.html">ABOUT US</a></li>
-        <li><a href="authors.html">AUTHORS</a></li>
+
+
+
+
+      <li class="dropdown">
+  <a href="authors.html">AUTHORS </a>
+  <ul class="dropdown-menu">
+    <li><a href="#">New Authors</a></li>
+    <li><a href="#">  Existing Authors </a></li>
+    <li><a href="#">Author information</a></li>
+  </ul>
+</li>
+
+
+
+
         <li><a href="contact.html">CONTACT US</a></li>
       </ul>
       <a href="register_seller.html" class="publish-link">PUBLISH WITH US</a>
@@ -536,83 +570,109 @@ color:#c48a2a;
 
 
 
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="container">
+    <p class="subtitle">YOUR GATEWAY TO GLOBAL PUBLISHING</p>
+    <h1>Welcome to WWP!</h1>
+    <p class="desc">
+      World Window Publishing (WWP) is your trusted partner in publishing books,
+      journals, magazines, and dissertations. We make the publishing process fast,
+      easy, and accessible for all authors.
+    </p>
+  </div>
+</section>
 
- 
-</head>
+<!-- STEPS SECTION -->
+<section class="steps">
+  <div class="container">
+    <p class="subtitle">A SIMPLE AND HASSLE-FREE PROCESS</p>
+    <h2>How to Publish with WWP?</h2>
 
+    <div class="step-box">
+      <span class="step-number">1</span>
+      <h3>Complete the Author Form</h3>
+      <ul>
+        <li>Visit our website and fill out the Author Registration Form.</li>
+        <li>Provide your basic details and book information.</li>
+      </ul>
+    </div>
 
+    <div class="step-box">
+      <span class="step-number">2</span>
+      <h3>Upload Your Book Details</h3>
+      <ul>
+        <li>Submit front and back covers.</li>
+        <li>Provide abstract or summary.</li>
+        <li>Fill all required book details.</li>
+      </ul>
+    </div>
 
+    <div class="step-box">
+      <span class="step-number">3</span>
+      <h3>Submit Your Manuscript</h3>
+      <ul>
+        <li>Upload soft copy or provide shipping details.</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
+<!-- SERVICES -->
+<section class="services">
+  <div class="container">
+    <p class="subtitle">BRING YOUR BOOK TO LIFE</p>
+    <h2>Publishing Services We Offer</h2>
 
+    <div class="service-grid">
+      <div class="card">
+        <h3>Book Design & Formatting</h3>
+        <p>Your book deserves to look as great as it reads.</p>
+      </div>
 
+      <div class="card">
+        <h3>Editing & Proofreading</h3>
+        <p>Professional editing to meet global standards.</p>
+      </div>
 
-<section class="contact-hero">
+      <div class="card">
+        <h3>Earn from Your Books</h3>
+        <p>Get royalties and track your earnings easily.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<div class="contact-container">
-
-<div class="small-title">GET IN TOUCH</div>
-
-<h1 class="contact-title">Let's Start a Conversation</h1>
-
-<p class="contact-text">
-Have questions about publishing with us? Our team is here to help you navigate your author journey. Reach out and we'll respond as quickly as possible.
-</p>
-
-<a href="#" class="contact-btn">SEND A MESSAGE →</a>
-
-</div>
-
+<!-- CTA -->
+<section class="cta">
+  <div class="container">
+    <h2>Ready to Publish Your Work?</h2>
+    <p>
+      Take the first step toward becoming a published author today.
+    </p>
+    <a href="#" class="btn">BECOME AN AUTHOR →</a>
+  </div>
 </section>
 
 
 
-<section class="contact-info">
-
-<div class="contact-grid">
-
-<div class="contact-card">
-
-<div class="icon">✉</div>
-
-<h3>Email Us</h3>
-
-<p>Our team typically responds within 48 hours on business days.</p>
-
-<strong>contact@wwpublishing.com</strong>
-
-</div>
 
 
 
-<div class="contact-card">
-
-<div class="icon">☎</div>
-
-<h3>Call Us</h3>
-
-<p>Our customer support team is available from 9:00 AM to 6:00 PM (GMT+3), Sunday to Thursday.</p>
-
-<strong>+973 39607724 / +973 36802244</strong>
-
-</div>
 
 
 
-<div class="contact-card">
 
-<div class="icon">📍</div>
 
-<h3>Visit Us</h3>
 
-<p>Visit us or send correspondence to our head office, located in the heart of Bahrain</p>
 
-<strong>House 2610, Hamad town, Kingdom of Bahrain</strong>
 
-</div>
 
-</div>
 
-</section>
+
+
+
+
 
 
 

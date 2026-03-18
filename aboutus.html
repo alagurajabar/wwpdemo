@@ -425,29 +425,151 @@ font-size:28px;
 color:#c48a2a;
 }
 
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+}
 
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
 
+/* ABOUT */
+.section-title {
+  text-align: center;
+  padding: 40px 0;
+  font-size: 32px;
+  background: #d9c7a3;
+}
 
+.about-content {
+  display: flex;
+  gap: 40px;
+  padding: 60px 0;
+  align-items: center;
+}
 
+.about-img img {
+  width: 100%;
+  border-radius: 5px;
+}
 
+.about-img {
+  flex: 1;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.tag {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #777;
+}
+
+.about-text h3 {
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+.about-text p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* CTA */
+.cta {
+  background: url('./img/a1.png') center/cover no-repeat;
+  height: 400px;
+  position: relative;
+}
+
+.cta-overlay {
+  background: rgba(0,0,0,0.6);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-content {
+  text-align: center;
+  color: #fff;
+  max-width: 600px;
+}
+
+.cta-content span {
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.cta-content h2 {
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #d9c7a3;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* FEATURES */
+.features {
+  padding: 60px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card {
+  background: #fff;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid #e0d2b0;
+  border-radius: 10px;
+}
+
+.card .icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #c5a86a;
+}
+
+.card h4 {
+  margin: 10px 0;
+}
+
+.card p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 </style>
 </head>
 <body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -533,86 +655,114 @@ color:#c48a2a;
   <a href="contact.html">Contact Us</a>
   <a href="register_seller.html" style="color:var(--gold)">Publish With Us</a>
 </div>
-
-
-
-
- 
 </head>
 
 
 
 
+<section class="about">
+  <div class="container">
+
+    <h2 class="section-title">About Us</h2>
+
+    <div class="about-content">
+      
+      <div class="about-img">
+        <img src="./img/about1.jpg" alt="About Image">
+      </div>
+
+      <div class="about-text">
+        <span class="tag">DISCOVER THE WORLD THROUGH BOOKS</span>
+        <h3>What It Means to Be a Part of World Window Publishing</h3>
+
+        <p>
+          At World Window Publishing, we are more than just a publishing company—we're creating a movement where stories come alive.
+        </p>
+
+        <p>
+          We believe books are windows to new worlds. Whether you're an author or a reader, you're part of something bigger.
+        </p>
+
+        <p>
+          Our team is united by a love for storytelling and a belief in its power to transform lives.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
 
+<section class="cta">
+  <div class="cta-overlay">
+    <div class="cta-content">
+      <span>CALLING ALL CREATORS, DREAMERS, AND STORYTELLERS!</span>
+      <h2>Join the Movement to Redefine Publishing</h2>
+      <p>
+        We’re looking for passionate creators who believe in the power of books to inspire and connect.
+      </p>
+      <a href="#" class="btn">Publish With Us</a>
+    </div>
+  </div>
+</section>
 
-<section class="contact-hero">
 
-<div class="contact-container">
+<section class="features">
+  <div class="container">
 
-<div class="small-title">GET IN TOUCH</div>
+    <div class="grid">
+      
+      <div class="card">
+        <div class="icon">❤</div>
+        <h4>Passion for Storytelling</h4>
+        <p>We believe storytelling inspires and transforms lives.</p>
+      </div>
 
-<h1 class="contact-title">Let's Start a Conversation</h1>
+      <div class="card">
+        <div class="icon">📖</div>
+        <h4>Books Without Barriers</h4>
+        <p>Making books available anytime, anywhere.</p>
+      </div>
 
-<p class="contact-text">
-Have questions about publishing with us? Our team is here to help you navigate your author journey. Reach out and we'll respond as quickly as possible.
-</p>
+      <div class="card">
+        <div class="icon">⚙</div>
+        <h4>Strength in Collaboration</h4>
+        <p>Authors and readers grow together.</p>
+      </div>
 
-<a href="#" class="contact-btn">SEND A MESSAGE →</a>
+      <div class="card">
+        <div class="icon">💡</div>
+        <h4>Innovation with Purpose</h4>
+        <p>Modern publishing with timeless values.</p>
+      </div>
 
-</div>
+      <div class="card">
+        <div class="icon">⭐</div>
+        <h4>Commitment to Excellence</h4>
+        <p>Delivering high-quality service and content.</p>
+      </div>
 
+      <div class="card">
+        <div class="icon">🌍</div>
+        <h4>Cultural & Global Impact</h4>
+        <p>Connecting readers worldwide.</p>
+      </div>
+
+    </div>
+
+  </div>
 </section>
 
 
 
-<section class="contact-info">
-
-<div class="contact-grid">
-
-<div class="contact-card">
-
-<div class="icon">✉</div>
-
-<h3>Email Us</h3>
-
-<p>Our team typically responds within 48 hours on business days.</p>
-
-<strong>contact@wwpublishing.com</strong>
-
-</div>
 
 
 
-<div class="contact-card">
-
-<div class="icon">☎</div>
-
-<h3>Call Us</h3>
-
-<p>Our customer support team is available from 9:00 AM to 6:00 PM (GMT+3), Sunday to Thursday.</p>
-
-<strong>+973 39607724 / +973 36802244</strong>
-
-</div>
 
 
 
-<div class="contact-card">
 
-<div class="icon">📍</div>
-
-<h3>Visit Us</h3>
-
-<p>Visit us or send correspondence to our head office, located in the heart of Bahrain</p>
-
-<strong>House 2610, Hamad town, Kingdom of Bahrain</strong>
-
-</div>
-
-</div>
-
-</section>
 
 
 
