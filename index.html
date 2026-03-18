@@ -325,8 +325,10 @@ section {
   background: #da0d0d;
 }
 
-/* show on hover */
-.dropdown:hover .dropdown-menu {
+/* show on hover or when a child receives focus (keyboard/tab navigation or click) */
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu,
+.dropdown-menu:hover {
   display: block;
 }
 </style>
@@ -635,14 +637,10 @@ section {
         </div>
       </div>
 
-      
-
+    
     </div>
   </div>
 </section>
-
-
-
 
 
 

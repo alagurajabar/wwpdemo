@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -343,236 +342,16 @@ display:block;
 
 
 
-.contact-hero{
-background:#d8caa8;
-padding:120px 0;
-}
 
-.contact-container{
-width:1100px;
-margin:auto;
-}
 
-.small-title{
-font-size:14px;
-letter-spacing:2px;
-color:#1c2a36;
-margin-bottom:20px;
-}
 
-.contact-title{
-font-size:52px;
-font-family:serif;
-margin-bottom:20px;
-color:#1c2a36;
-}
 
-.contact-text{
-max-width:600px;
-line-height:1.7;
-color:#2d3b45;
-margin-bottom:30px;
-}
 
-.contact-btn{
-display:inline-block;
-padding:14px 28px;
-background:#2d3b45;
-color:white;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;
-}
 
-.contact-info{
-background:#f2f2f2;
-padding:80px 0;
-}
-
-.contact-grid{
-width:1100px;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:40px;
-}
-
-.contact-card{
-background:#e6e0cc;
-padding:40px;
-border-radius:10px;
-box-shadow:0 10px 20px rgba(0,0,0,0.05);
-}
-
-.contact-card h3{
-margin-top:20px;
-margin-bottom:10px;
-font-size:22px;
-}
-
-.contact-card p{
-color:#444;
-line-height:1.6;
-}
-
-.contact-card strong{
-display:block;
-margin-top:15px;
-}
-
-.icon{
-font-size:28px;
-color:#c48a2a;
-}
-
-body {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  background: #f5f5f5;
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* ABOUT */
-.section-title {
-  text-align: center;
-  padding: 40px 0;
-  font-size: 32px;
-  background: #d9c7a3;
-}
-
-.about-content {
-  display: flex;
-  gap: 40px;
-  padding: 60px 0;
-  align-items: center;
-}
-
-.about-img img {
-  width: 100%;
-  border-radius: 5px;
-}
-
-.about-img {
-  flex: 1;
-}
-
-.about-text {
-  flex: 1;
-}
-
-.tag {
-  font-size: 12px;
-  letter-spacing: 1px;
-  color: #777;
-}
-
-.about-text h3 {
-  font-size: 32px;
-  margin: 10px 0;
-}
-
-.about-text p {
-  color: #555;
-  line-height: 1.6;
-}
-
-/* CTA */
-.cta {
-  background: url('./img/a1.png') center/cover no-repeat;
-  height: 600px;
-  position: relative;
-}
-
-.cta-overlay {
-  background: rgba(0,0,0,0.6);
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.cta-content {
-  text-align: center;
-  color: #fff;
-  max-width: 600px;
-}
-
-.cta-content span {
-  font-size: 12px;
-  letter-spacing: 1px;
-}
-
-.cta-content h2 {
-  font-size: 36px;
-  margin: 10px 0;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: #d9c7a3;
-  color: #000;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-/* FEATURES */
-.features {
-  padding: 60px 0;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
-.card {
-  background: #fff;
-  padding: 90px;
-  text-align: center;
-  border: 2px solid #e0d2b0;
-  border-radius: 10px;
-}
-
-.card .icon {
-  font-size: 30px;
-  margin-bottom: 10px;
-  color: #c5a86a;
-}
-
-.card h4 {
-  margin: 10px 0;
-}
-
-.card p {
-  font-size: 14px;
-  color: #666;
-}
-
-/* RESPONSIVE */
-@media(max-width: 768px) {
-  .about-content {
-    flex-direction: column;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
-}
 
 </style>
 </head>
 <body>
-
-
-
 
 <!-- ══ TOP BAR ══ -->
 <div class="top-bar">
@@ -634,13 +413,13 @@ body {
     <div class="nav-inner">
       <button class="browse-btn"><i class="uil uil-apps"></i> BROWSE CATEGORIES <i class="uil uil-angle-down"></i></button>
       <ul class="nav-links">
-        <li><a href="index.html" class="active">HOME</a></li>
-        <li><a href="bookstore.html">BOOKSTORE</a></li>
-        <li><a href="aboutus.html">ABOUT US</a></li>
-        <li><a href="authors.html">AUTHORS</a></li>
-        <li><a href="contact.html">CONTACT US</a></li>
+        <li><a href="index.php" class="active">HOME</a></li>
+        <li><a href="bookstore.php">BOOKSTORE</a></li>
+        <li><a href="about.php">ABOUT US</a></li>
+        <li><a href="authors.php">AUTHORS</a></li>
+        <li><a href="contact.php">CONTACT US</a></li>
       </ul>
-      <a href="register_seller.html" class="publish-link">PUBLISH WITH US</a>
+      <a href="register_seller.php" class="publish-link">PUBLISH WITH US</a>
     </div>
   </div>
 </nav>
@@ -648,111 +427,423 @@ body {
 <!-- ══ MOBILE NAV ══ -->
 <div class="mobile-nav" id="mobileNav">
   <button class="mob-nav-close" onclick="closeMobNav()"><i class="uil uil-times"></i></button>
-  <a href="index.html">Home</a>
-  <a href="bookstore.html">Bookstore</a>
-  <a href="aboutus.html">About Us</a>
-  <a href="authors.html">Authors</a>
-  <a href="contact.html">Contact Us</a>
-  <a href="register_seller.html" style="color:var(--gold)">Publish With Us</a>
+  <a href="index.php">Home</a>
+  <a href="bookstore.php">Bookstore</a>
+  <a href="about.php">About Us</a>
+  <a href="authors.php">Authors</a>
+  <a href="contact.php">Contact Us</a>
+  <a href="register_seller.php" style="color:var(--gold)">Publish With Us</a>
 </div>
+
+
+
+
+ 
 </head>
 
 
+<body>
+
+<div class="header1">
+Privacy Policy
+</div>
+
+<div class="container1">
+
+<div class="sidebar">
+
+<button class="active" onclick="showSection('intro',this)">Introduction</button>
+<button onclick="showSection('collect',this)">Information We Collect</button>
+<button onclick="showSection('use',this)">How We Use Your Info</button>
+<button onclick="showSection('share',this)">How We Share Your Info</button>
+<button onclick="showSection('rights',this)">Your Rights And Choices</button>
+<button onclick="showSection('security',this)">Data Security</button>
+<button onclick="showSection('retention',this)">Data Retention</button>
+<button onclick="showSection('thirdparty',this)">Third Party Services</button>
+<button onclick="showSection('transfer',this)">International Data Transfers</button>
+<button onclick="showSection('contact',this)">Contact Us</button>
+
+</div>
 
 
-<section class="about">
-  <div class="container">
+<div class="content">
 
-    <h2 class="section-title">About Us</h2>
+<div id="intro" class="section active">
 
-    <div class="about-content">
-      
-      <div class="about-img">
-        <img src="./img/about1.jpg" alt="About Image">
-      </div>
-
-      <div class="about-text">
-        <span class="tag">DISCOVER THE WORLD THROUGH BOOKS</span>
-        <h3>What It Means to Be a Part of World Window Publishing</h3>
-
-        <p>
-          At World Window Publishing, we are more than just a publishing company—we're creating a movement where stories come alive.
-        </p>
-
-        <p>
-          We believe books are windows to new worlds. Whether you're an author or a reader, you're part of something bigger.
-        </p>
-
-        <p>
-          Our team is united by a love for storytelling and a belief in its power to transform lives.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
+<p>
+Welcome to World Window Publishing (WWP), a platform accessible through https://worldwindowpublishing.com. At WWP, your privacy is of utmost importance to us. This Privacy Policy explains in detail how we handle and protect your personal information when you visit our website, interact with our services, or engage with our platform in any capacity. We believe in transparency and are dedicated to informing you about the types of data we collect, the reasons we collect it, how we use it, and how we ensure its safety.
+</p>
+<br>
+<p>
+By using our website and services, you entrust us with your personal information, and we are committed to respecting that trust. This document will guide you through your rights and choices regarding your data, ensuring that you remain in control of your information. Please take the time to read this policy carefully, as your continued use of our services signifies your agreement with the practices described herein.
+</p><br>
+<p>
+  If you have any questions or require further clarification about this Privacy Policy, we encourage you to contact us through the details provided at the end of this document.
+</p>
 
 
-<section class="cta">
-  <div class="cta-overlay">
-    <div class="cta-content">
-      <span>CALLING ALL CREATORS, DREAMERS, AND STORYTELLERS!</span>
-      <h2>Join the Movement to Redefine Publishing</h2>
-      <p>
-        We’re looking for passionate creators who believe in the power of books to inspire and connect.
-      </p>
-      <a href="./register_seller.html" class="btn">Publish With Us</a>
-    </div>
-  </div>
-</section>
+</div>
+
+<div id="collect" class="section">
 
 
-<section class="features">
-  <div class="container">
+<p>
+When you interact with World Window Publishing (WWP), we may collect different types of information to provide you with the best possible experience and services. The information we gather generally falls into the following categories:
+</p><br>
+<h2>Information You Provide to Us</h2>
 
-    <div class="grid">
-      
-      <div class="card">
-        <div class="icon">❤</div>
-        <h4>Passion for Storytelling</h4>
-        <p>We believe storytelling inspires and transforms lives.</p>
-      </div>
 
-      <div class="card">
-        <div class="icon">📖</div>
-        <h4>Books Without Barriers</h4>
-        <p>Making books available anytime, anywhere.</p>
-      </div>
+<p>
+When creating an account, making a purchase, or filling out forms on our website, you may provide personal details such as your name, email address, phone number, billing and shipping addresses, and payment details. If you communicate with us directly, such as through customer support, we may collect additional details like the content of your messages and any attachments you send.
+</p><br>
+<h2>Information Collected Automatically</h2>
+<p>
+When you visit our website, we may automatically collect information such as your IP address, browser type, device information, operating system, and browsing behavior (e.g., pages visited, time spent on pages). This helps us understand how users interact with our platform and improve its functionality.
+</p><br>
 
-      <div class="card">
-        <div class="icon">⚙</div>
-        <h4>Strength in Collaboration</h4>
-        <p>Authors and readers grow together.</p>
-      </div>
+<h2>Information from Third Parties</h2>
+<p>
+We may collect personal information like name, email, phone number,
+billing address and browsing activity when you use our website.
+</p><br>
+<h2>Cookies and Tracking Technologies</h2>
+<p>
+Like many websites, we use cookies and similar technologies to enhance your browsing experience. These technologies allow us to remember your preferences, track your activities, and provide personalized content or recommendations. You can manage your cookie preferences through your browser settings.
+</p><br>
 
-      <div class="card">
-        <div class="icon">💡</div>
-        <h4>Innovation with Purpose</h4>
-        <p>Modern publishing with timeless values.</p>
-      </div>
 
-      <div class="card">
-        <div class="icon">⭐</div>
-        <h4>Commitment to Excellence</h4>
-        <p>Delivering high-quality service and content.</p>
-      </div>
+</div>
 
-      <div class="card">
-        <div class="icon">🌍</div>
-        <h4>Cultural & Global Impact</h4>
-        <p>Connecting readers worldwide.</p>
-      </div>
+<div id="use" class="section">
 
-    </div>
+<p>
+World Window Publishing (WWP) uses the information we collect for various purposes, all aimed at improving your experience and ensuring the efficiency of our services. Below is an outline of how your information is used:
+</p><br>
+<h2>To Provide and Improve Our Services</h2>
+<p>
+Process your transactions, such as purchases, payments, and deliveries. Offer personalized recommendations and tailor content to your interests. Ensure smooth functionality and enhance the usability of our platform.
+</p><br>
+<h2>To Communicate with You</h2>
+<p>
+Respond to your inquiries, requests, or feedback submitted through customer support or other communication channels. Notify you about updates, promotions, or events related to our services. Send transactional communications, such as order confirmations, invoices, or account-related notifications.
+</p><br>
+<h2>For Marketing and Promotional Activities</h2>
+<p>
+Send you newsletters, promotional offers, and other marketing communications tailored to your preferences, where you have opted to receive such communications. Conduct surveys or request feedback to understand your interests and improve our services.
+</p><br>
+<h2>For Security and Fraud Prevention</h2>
+<p>
+Detect, investigate, and prevent unauthorized access, fraud, or other malicious activities that could compromise the security of our platform and users. Enforce our terms of use and comply with legal obligations.
+</p><br>
+<h2>For Analytics and Research
+</h2>
+<p>
+Analyze website usage patterns and trends to improve the functionality and content of our platform. Conduct research and analysis to develop new features or enhance existing ones.
+</p><br>
+<p>
+We ensure that the data collected is handled responsibly and is only used for the purposes outlined above or otherwise disclosed to you.
+</p><br>
+</div>
 
-  </div>
-</section>
+<div id="share" class="section">
+
+<p>
+World Window Publishing (WWP) respects your privacy and ensures that your information is shared responsibly. We do not sell your personal information to third parties. However, we may share your data in the following circumstances:
+</p><br>
+
+<h2>With Service Providers and Partners</h2>
+<p>
+We work with third-party service providers, such as payment processors, shipping companies, and IT support, to facilitate our services. These partners only receive the information necessary to perform their functions and are obligated to protect your data.
+</p><br>
+
+<h2>For Legal Obligations and Security</h2>
+<p>
+We may disclose your information if required by law, regulation, or legal process. This includes compliance with court orders, subpoenas, or other lawful requests.
+Your data may also be shared to protect the rights, property, or safety of our users, employees, or the public.
+</p><br>
+
+<h2>Business Transfers
+</h2>
+<p>
+In the event of a merger, acquisition, reorganization, or sale of our assets, your information may be transferred as part of the transaction. We will notify you of any such change and your options regarding your data.
+</p><br>
+
+<h2>With Your Consent</h2>
+<p>
+In certain cases, we may share your information with your explicit consent, such as when you opt-in to share data with third parties for promotional purposes.
+</p><br>
+
+<h2>Aggregated or De-Identified Information</h2>
+<p>
+We may share aggregated or anonymized data that cannot be used to identify you personally. This type of information is used for research, analysis, or marketing purposes.
+</p><br>
+
+<p>
+We take all reasonable measures to ensure that any third parties we work with adhere to strict data protection standards and use your information only for the purposes outlined above.
+</p><br>
+
+
+</div>
+
+<div id="rights" class="section">
+
+<p>
+At World Window Publishing (WWP), we believe in empowering our users to make informed decisions about their personal information. You have several rights and choices when it comes to how your data is collected, used, and shared:
+</p><br>
+
+<h2>Access and Update Your Information</h2>
+<p>
+You can access, update, or correct your personal information by logging into your account or contacting us directly.
+</p><br>
+
+<h2>Opt-Out of Marketing Communications</h2>
+<p>
+If you no longer wish to receive marketing emails or newsletters, you can unsubscribe using the link provided in our communications or adjust your preferences in your account settings
+</p><br>
+
+<h2>Manage Cookies and Tracking Technologies</h2>
+<p>
+Most web browsers allow you to manage your cookie settings. You can choose to disable cookies or receive a notification when they are being used. Note that disabling cookies may affect your browsing experience
+</p><br>
+
+<h2>Request Data Deletion</h2>
+<p>
+You may request that we delete your personal information, subject to legal and contractual obligations. Please note that some data may need to be retained for record-keeping or compliance purposes
+</p><br>
+
+<h2>Withdraw Consent</h2>
+<p>
+If you have previously given consent for the collection or processing of your data, you may withdraw it at any time. However, this will not affect the lawfulness of data processing carried out before the withdrawal.
+</p><br>
+
+<h2>File a Complaint</h2>
+<p>
+If you believe your rights have been violated, you have the right to file a complaint with the relevant data protection authority in your region.
+</p><br>
+<p>
+To exercise any of these rights, or if you have questions about your privacy, you can contact us using the information provided in the “Contact Us” section below.
+</p><br>
+
+</div>
+
+
+
+
+
+<div id="security" class="section">
+
+<p>
+World Window Publishing (WWP) takes the security of your personal information very seriously. We implement industry-standard measures to protect your data from unauthorized access, disclosure, alteration, or destruction.
+
+
+</p><br>
+<h2>Technical Safeguards</h2>
+<p>
+We use encryption, firewalls, and secure server protocols to safeguard your personal information during transmission and storage. Regular security assessments and system monitoring help us identify and mitigate potential vulnerabilities.
+</p><br>
+
+<h2>Organizational Safeguards</h2>
+<p>
+Access to your personal data is restricted to authorized personnel who require the information to perform their duties. Our employees and service providers are required to adhere to strict confidentiality agreements and data protection practices.
+</p><br>
+
+<h2>User Responsibility</h2>
+<p>
+While we take every precaution to protect your data, we encourage you to take steps to secure your account. Use strong, unique passwords, avoid sharing your login credentials, and notify us immediately if you suspect any unauthorized activity on your account.
+</p><br>
+
+<h2>No Absolute Security Guarantee</h2>
+<p>
+Despite our best efforts, no method of data transmission or storage is 100% secure. While we strive to protect your personal information, we cannot guarantee absolute security.
+</p><br>
+
+<p>
+By using our services, you acknowledge and accept the inherent risks of data transmission over the internet. If you have concerns about the security of your data, please contact us using the details provided in the “Contact Us” section.
+</p><br>
+
+
+
+
+</div>
+
+<div id="retention" class="section">
+ 
+<p>
+World Window Publishing (WWP) retains your personal information only for as long as it is necessary to fulfill the purposes outlined in this Privacy Policy or comply with legal, regulatory, or contractual obligations.
+</p><br>
+
+
+
+<h2>Retention Periods</h2>
+
+
+<ul>
+  <li>
+  Account Information: We retain your account information for as long as your account is active or as needed to provide you with our services. If you request account deletion, we will securely delete your data unless retention is required for legal purposes.
+    </li>
+
+  <li>
+ Transaction Data: Data related to purchases, payments, or other transactions may be retained for record-keeping and auditing purposes, as required by law.
+    </li>
+
+  <li>
+ Communication Data: Records of communications with customer support or feedback may be retained to ensure service quality and resolve any issues that arise.
+    </li>
+</ul>
+
+<h2>Criteria for Retention</h2>
+
+
+<ul>
+  <li>
+ The nature of your relationship with us (e.g., active customer, past customer, etc.).</li>
+
+  <li>
+ Legal obligations that require specific information to be retained for a set period (e.g., tax or financial regulations). </li>
+
+  <li>
+Whether the information is necessary to resolve disputes, enforce agreements, or protect against fraud. </li>
+</ul>
+
+<h2>Secure Deletion</h2>
+
+
+<ul>
+  <li>
+When your information is no longer needed, we take steps to securely delete or anonymize it to prevent unauthorized access or use.</li>
+
+</ul><br>
+<p>
+If you have specific questions about our data retention practices, you may contact us using the details provided in the “Contact Us” section below.
+</p>
+
+
+
+</div>
+
+
+
+
+<div id="thirdparty" class="section">
+
+<p>
+World Window Publishing (WWP) may contain links to third-party websites, services, or applications that are not operated or controlled by us. This Privacy Policy applies solely to the information collected and processed by WWP.
+</p><br>
+ 
+<h2>Third-Party Links</h2>
+<p>
+Our website may include links to external websites for your convenience, such as partner organizations, publishers, or advertisers. Please note that we are not responsible for the privacy practices or content of these third-party sites.When you leave our website to access third-party links, we encourage you to review the privacy policies of those websites to understand how your data will be handled.
+</p><br>
+ 
+<h2>Third Party Services</h2>
+<p>
+Certain functionalities on our website, such as payment processing, may be provided by third-party service providers. These providers may collect and process your data in accordance with their own privacy policies.
+We work with reputable third parties and strive to ensure they adhere to high data protection standards.
+</p><br>
+ 
+<h2>No Responsibility for Third Parties</h2>
+<p>
+We do not control, endorse, or assume responsibility for the actions or policies of third parties. Your interaction with any third-party site or service is at your own risk.
+</p><br>
+ 
+ 
+<p>
+By using our platform, you acknowledge that we are not liable for the data practices of third parties accessed through links or services on our website.
+</p><br>
+
+
+
+</div>
+
+<div id="transfer" class="section">
+ 
+<p>
+World Window Publishing (WWP) operates globally, and your personal information may be stored, processed, or transferred to locations outside of your country of residence. By using our services, you acknowledge and agree that your data may be transferred to jurisdictions with different data protection laws than your own.
+</p><br>
+
+<h2>Compliance with Applicable Laws</h2>
+<p>
+We take steps to ensure that international data transfers comply with relevant laws and regulations, including implementing appropriate safeguards to protect your information.
+</p><br>
+
+<h2>Data Storage and Processing Locations</h2>
+<p>
+Your data may be stored and processed in countries where we or our service providers maintain facilities. These locations are selected to provide efficient and reliable services while ensuring robust data protection.
+</p><br>
+
+<h2>Safeguards for International Transfers</h2>
+<p>
+When transferring data across borders, we implement safeguards such as data protection agreements, Standard Contractual Clauses, or reliance on adequacy decisions issued by relevant regulatory authorities.
+</p><br>
+
+<h2>Your Consent</h2>
+<p>
+By providing your personal information and using our services, you consent to the transfer of your data to other countries as outlined in this section.
+</p><br>
+ 
+<p>
+We remain committed to ensuring the security and privacy of your data, regardless of where it is processed or stored. If you have concerns about the international transfer of your data, please contact us for further clarification.
+</p><br>
+
+</div>
+<div id="contact" class="section">
+ 
+<p>
+If you have any questions, concerns, or feedback regarding this Privacy Policy or the handling of your personal information, please feel free to contact us. We are committed to addressing your inquiries promptly and transparently.
+</p>
+
+<br>
+<p>
+You can reach us through the following methods:
+</p>
+<ul>
+  <li>
+  Email: contact@wwpublishing.com
+    </li>
+
+  <li>
+Phone: +973 39607724 / +973 36802244
+    </li>
+
+  <li>
+ Mailing Address: House 2610, Road 1042, Block 1210, Hamad town, Kingdom of Bahrain
+    </li>
+</ul>
+<br>
+<p>
+We encourage you to reach out to us if you have any issues or require clarification about how we manage your personal data.
+</p>
+
+
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+function showSection(id,btn){
+
+let sections=document.querySelectorAll('.section');
+sections.forEach(sec=>sec.classList.remove('active'));
+
+document.getElementById(id).classList.add('active');
+
+let buttons=document.querySelectorAll('.sidebar button');
+buttons.forEach(b=>b.classList.remove('active'));
+
+btn.classList.add('active');
+
+}
+
+</script>
+
+</body>
+
+
+
 
 
 
@@ -802,12 +893,12 @@ body {
       <div class="f-col">
         <h4>Menu</h4>
         <ul>
-          <li><a href="index.html">Home WWP</a></li>
-          <li><a href="bookstore.html">Bookstore</a></li>
-          <li><a href="aboutus.html">About Us</a></li>
-          <li><a href="authors.html">Authors' List</a></li>
-          <li><a href="contact.html">Contact us</a></li>
-          <li><a href="register_seller.html">New Authors</a></li>
+          <li><a href="index.php">Home WWP</a></li>
+          <li><a href="bookstore.php">Bookstore</a></li>
+          <li><a href="about.php">About Us</a></li>
+          <li><a href="authors.php">Authors' List</a></li>
+          <li><a href="contact.php">Contact us</a></li>
+          <li><a href="register_seller.php">New Authors</a></li>
         </ul>
       </div>
     </div>

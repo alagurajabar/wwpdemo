@@ -353,18 +353,40 @@
       </div>
     </div>
 
-    <div class="fg" style="margin-bottom:20px">
-      <label>Status of Book Design <span class="req">*</span></label>
-      <div class="radio-row">
-        <label class="ro">
-          <input type="radio" name="book_design_status" value="undesigned" onchange="onDesignStatus()" checked> Undesigned Book
-        </label>
-        <label class="ro">
-          <input type="radio" name="book_design_status" value="designed" onchange="onDesignStatus()"> Already Designed Book
-        </label>
+    <div class="fr" style="margin-bottom:16px">
+      <div class="fg">
+        <label>Status of Book Design <span class="req">*</span></label>
+        <div class="radio-row">
+          <label class="ro"><input type="radio" name="book_design_status" value="undesigned" onchange="onDesignStatus()" checked> Undesigned Book</label>
+          <label class="ro"><input type="radio" name="book_design_status" value="designed" onchange="onDesignStatus()"> Already Designed Book</label>
+        </div>
       </div>
-      <p class="ferr" id="e_design_status">Please select book design status.</p>
     </div>
+
+    <div class="cond" id="undesignedBlock">
+      <div class="instr">
+        <h3>Undesigned Book Information</h3>
+        <p>Provide detailed specifications for your book, including the number of pages, images, and tables. This helps us design and format your manuscript for a polished final product.</p>
+      </div>
+      <div class="fr">
+        <div class="fg">
+          <label for="numPages">Number of Pages <span class="req">*</span></label>
+          <input type="number" id="numPages" placeholder="Number of Pages" min="1"/>
+          <p class="ferr" id="e_pages">Number of pages is required.</p>
+        </div>
+        <div class="fg">
+          <label for="numImages">Number of Images <span class="req">*</span></label>
+          <input type="number" id="numImages" placeholder="Number of Images" min="0"/>
+          <p class="ferr" id="e_images">Number of images is required.</p>
+        </div>
+        <div class="fg">
+          <label for="numTables">Number of Tables <span class="req">*</span></label>
+          <input type="number" id="numTables" placeholder="Number of Tables" min="0"/>
+          <p class="ferr" id="e_tables">Number of tables is required.</p>
+        </div>
+      </div>
+    </div>
+
   </div>
 
 
@@ -489,7 +511,7 @@
         </div>
         <p class="ferr" id="e_shipping">Please select a shipping method.</p>
       </div>
-      <!-- Address (require_wwp only) -->
+     <!-- Address (for all shipping options) --> 
       <div class="cond" id="addrBlock">
         <div class="addr-card">
           <h4>Author's Address</h4>
@@ -547,30 +569,7 @@
   </div>
 
   <!-- UNDESIGNED BOOK INFO (shown when Undesigned Book selected) -->
-  <div class="cond" id="undesignedBlock">
-    <div class="info-card">
-      <h3>Undesigned Book Information</h3>
-      <p>Provide detailed specifications for your book, including the number of pages, images, and tables. This information helps us design and format your manuscript to create a polished and professional final product.</p>
-      <hr class="divider"/>
-      <div class="fr3">
-        <div class="fg">
-          <label for="numPages">Number of Pages <span class="req">*</span></label>
-          <input type="number" id="numPages" placeholder="Number of Pages" min="1"/>
-          <p class="ferr" id="e_pages">Number of pages is required.</p>
-        </div>
-        <div class="fg">
-          <label for="numImages">Number of Images <span class="req">*</span></label>
-          <input type="number" id="numImages" placeholder="Number of Images" min="0"/>
-          <p class="ferr" id="e_images">Number of images is required.</p>
-        </div>
-        <div class="fg">
-          <label for="numTables">Number of Tables <span class="req">*</span></label>
-          <input type="number" id="numTables" placeholder="Number of Tables" min="0"/>
-          <p class="ferr" id="e_tables">Number of tables is required.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+  
 
   <div class="nav">
     <button class="btn btn-out" onclick="goBack(3)">← Previous</button>
@@ -649,78 +648,83 @@
       </div>
     </div>
 
-    <div class="fr" style="margin-top:4px">
+    <div class="fr" style="margin-top:16px">
       <div class="fg">
         <label>Book Front Cover <span class="req">*</span></label>
         <div class="radio-row">
-          <label class="ro"><input type="radio" name="front_cover" value="present" onchange="updPayment()"> Present</label>
-          <label class="ro"><input type="radio" name="front_cover" value="not_present" onchange="updPayment()"> Not Present</label>
+          <label class="ro"><input type="radio" name="front_cover" value="present" onchange="onFrontCoverStatus()"> Present</label>
+          <label class="ro"><input type="radio" name="front_cover" value="not_present" onchange="onFrontCoverStatus()" checked> Not Present</label>
         </div>
         <p class="ferr" id="e_fcover">Please select front cover status.</p>
       </div>
       <div class="fg">
         <label>Book Back Cover <span class="req">*</span></label>
         <div class="radio-row">
-          <label class="ro"><input type="radio" name="back_cover" value="present" onchange="updPayment()"> Present</label>
-          <label class="ro"><input type="radio" name="back_cover" value="not_present" onchange="updPayment()"> Not Present</label>
+          <label class="ro"><input type="radio" name="back_cover" value="present" onchange="onBackCoverStatus()"> Present</label>
+          <label class="ro"><input type="radio" name="back_cover" value="not_present" checked onchange="onBackCoverStatus()"> Not Present</label>
         </div>
         <p class="ferr" id="e_bcover">Please select back cover status.</p>
       </div>
     </div>
 
-    <div class="fr" style="margin-top:4px">
-      <div class="fg">
+    <div class="fr" style="margin-top:16px">
+      <div class="fg" style="border:1px solid #E2E0D8; border-radius:10px; padding:16px;">
         <label for="frontCoverTxt">Front Cover Text</label>
         <textarea id="frontCoverTxt" placeholder="Front cover text…" style="min-height:100px"></textarea>
       </div>
-      <div class="fg">
+      <div class="fg" style="border:1px solid #E2E0D8; border-radius:10px; padding:16px;">
         <label for="backCoverTxt">Back Cover Text</label>
         <textarea id="backCoverTxt" placeholder="Back cover text…" style="min-height:100px"></textarea>
       </div>
     </div>
 
-    <div class="fr" style="margin-top:4px">
-      <div class="fg">
-        <label>Front Cover Upload (Featured) <span class="req">*</span></label>
-        <div class="file-btn-wrap">
-          <button type="button" class="file-btn" onclick="document.getElementById('frontCoverFile').click()">Choose File</button>
-          <span class="file-btn-label fn" id="frontCoverFN">No file chosen</span>
-          <input type="file" id="frontCoverFile" accept="image/*,.pdf" onchange="showFN(this,'frontCoverFN')" style="display:none"/>
+    <div id="frontCoverUploadPopup" class="cond" style="margin-top:16px; padding:16px; border:1.5px solid var(--border); border-radius:14px; background:#fdfcf8;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+        <div>
+          <strong>Upload Front Cover Images</strong>
+          <div style="font-size:13px; color:var(--gray);">Upload one or more cover images (JPG/PNG).</div>
         </div>
-        <p class="ferr" id="e_fcover_file">Front cover file is required.</p>
+        <button type="button" class="btn btn-out" style="padding:6px 12px; font-size:13px;" onclick="hideFrontCoverUpload()">Close</button>
       </div>
-      <div class="fg">
-        <label>Back Cover Upload <span class="req">*</span></label>
-        <div class="file-btn-wrap">
-          <button type="button" class="file-btn" onclick="document.getElementById('backCoverFile').click()">Choose File</button>
-          <span class="file-btn-label fn" id="backCoverFN">No file chosen</span>
-          <input type="file" id="backCoverFile" accept="image/*,.pdf" onchange="showFN(this,'backCoverFN')" style="display:none"/>
-        </div>
-        <p class="ferr" id="e_bcover_file">Back cover file is required.</p>
+      <div class="dz" onclick="document.getElementById('frontCoverImg').click()" ondragover="doDrag(event,this)" ondrop="doDrop(event,'frontCoverImg','frontCoverImgFn')">
+        <div class="dz-icon">🖼️</div>
+        <div class="dz-txt">Drag &amp; drop or <strong>click to browse</strong></div>
+        <div class="fn" id="frontCoverImgFn"></div>
+        <input type="file" id="frontCoverImg" accept="image/*" multiple style="display:none" onchange="showFN(this,'frontCoverImgFn')"/>
       </div>
+      <p class="ferr" id="e_frontcover_img">Please upload at least one front cover image.</p>
     </div>
 
-    <div class="fr" style="margin-top:4px">
+    <div id="backCoverUploadPopup" class="cond" style="margin-top:16px; padding:16px; border:1.5px solid var(--border); border-radius:14px; background:#fdfcf8;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+        <div>
+          <strong>Upload Back Cover Images</strong>
+          <div style="font-size:13px; color:var(--gray);">Upload one or more back cover images (JPG/PNG).</div>
+        </div>
+        <button type="button" class="btn btn-out" style="padding:6px 12px; font-size:13px;" onclick="hideBackCoverUpload()">Close</button>
+      </div>
+      <div class="dz" onclick="document.getElementById('backCoverImg').click()" ondragover="doDrag(event,this)" ondrop="doDrop(event,'backCoverImg','backCoverImgFn')">
+        <div class="dz-icon">🖼️</div>
+        <div class="dz-txt">Drag &amp; drop or <strong>click to browse</strong></div>
+        <div class="fn" id="backCoverImgFn"></div>
+        <input type="file" id="backCoverImg" accept="image/*" multiple style="display:none" onchange="showFN(this,'backCoverImgFn')"/>
+      </div>
+      <p class="ferr" id="e_backcover_img">Please upload at least one back cover image.</p>
+    </div>
+
+    <div class="fr" style="margin-top:16px">
       <div class="fg">
         <label for="suggestedPrice">Suggested Book Price (in USD - $) <span class="req">*</span></label>
         <input type="number" id="suggestedPrice" placeholder="Book Price" min="0" step="0.01"/>
         <p class="ferr" id="e_price">Suggested price is required.</p>
       </div>
       <div class="fg">
-        <label>Book Cover Type <span class="req">*</span></label>
-        <div class="radio-row">
-          <label class="ro"><input type="radio" name="cover_type" value="hardcover"> Hardcover</label>
-          <label class="ro"><input type="radio" name="cover_type" value="softcover"> Softcover</label>
-        </div>
-        <p class="ferr" id="e_covertype">Please select cover type.</p>
+        <label for="colorTheme">Book Color Theme (Optional)</label>
+        <input type="color" id="colorTheme" value="#1A1A2E"/>
       </div>
     </div>
 
     <div class="fr" style="margin-top:4px">
-      <div class="fg">
-        <label for="colorTheme">Book Color Theme (Optional)</label>
-        <input type="color" id="colorTheme" value="#1A1A2E"/>
-      </div>
       <div class="fg">
         <label for="bookDim">Proposed Book Dimension <span class="req">*</span></label>
         <select id="bookDim">
@@ -737,6 +741,7 @@
         <p class="ferr" id="e_dim">Book dimension is required.</p>
       </div>
     </div>
+
   </div><!-- /bookDetailsExtra -->
 
   <!-- DISSERTATION ONLY: extra fields -->
@@ -820,26 +825,30 @@
   <p class="ssub">Review the summary of all applicable charges for your selected publishing services.</p>
   <hr class="divider"/>
 
-  <!-- BOOK/OTHER PUBLISHERS: Designing Cost + ISBN -->
-  <div class="cond" id="bookPayExtra">
-    <div class="fr full" style="margin-bottom:16px">
-      <div class="fg">
-        <label for="designCost">Designing Cost of Book (in USD $)</label>
-        <input type="number" id="designCost" placeholder="0.00" min="0" step="0.01" oninput="updPayment()" style="background:#f8f8f8"/>
-      </div>
+  <!-- BOOK/OTHER PUBLISHERS: Designing Cost -->
+  <div class="fr full" style="margin-bottom:16px">
+    <div class="fg">
+      <label for="designCost">Designing Cost of Book (in USD $)</label>
+      <input type="number" id="designCost" placeholder="0.00" min="0" step="0.01" oninput="updPayment()" style="background:#f8f8f8"/>
     </div>
+  </div>
 
-    <div class="fg" style="margin-bottom:20px">
-      <div style="display:flex;align-items:center;flex-wrap:wrap;gap:12px">
-        <label style="flex:none">ISBN for the Book <span class="req">*</span></label>
-        <span class="isbn-msg" id="isbnMsg" style="display:none">ISBN Charges: $100.00</span>
-      </div>
-      <div class="radio-row" style="margin-top:8px">
-        <label class="ro"><input type="radio" name="isbn_opt" value="present" onchange="onISBN()"> Present</label>
-        <label class="ro"><input type="radio" name="isbn_opt" value="buy_wwp" onchange="onISBN()"> Buy through WWP</label>
-      </div>
-      <p class="ferr" id="e_isbn">Please select ISBN option.</p>
+  <!-- ISBN OPTIONS -->
+  <div class="fg" style="margin-bottom:20px">
+    <div style="display:flex;align-items:center;flex-wrap:wrap;gap:12px">
+      <label style="flex:none">ISBN for the Book <span class="req">*</span></label>
+      <span class="isbn-msg" id="isbnMsg" style="display:none">ISBN Charges: $100.00</span>
     </div>
+    <div class="radio-row" style="margin-top:8px">
+      <label class="ro"><input type="radio" name="isbn_opt" value="present" onchange="onISBN()"> Present</label>
+      <label class="ro"><input type="radio" name="isbn_opt" value="buy_wwp" onchange="onISBN()"> Buy through WWP</label>
+    </div>
+    <div id="isbnInputWrap" class="cond" style="margin-top:12px">
+      <label for="isbnNumber">ISBN Number</label>
+      <input type="text" id="isbnNumber" placeholder="Enter ISBN number" style="margin-top:6px"/>
+      <p class="ferr" id="e_isbn_number">ISBN number is required when Present is selected.</p>
+    </div>
+    <p class="ferr" id="e_isbn">Please select an ISBN option.</p>
   </div>
 
   <!-- PAYMENT LABEL -->
@@ -877,7 +886,7 @@
 
 <script>
 // ── CONFIG ─────────────────────────────────────────────────────
-const PUB_CHARGES = { book_publishing: 200, student_dissertations: 20, other_publishers: 200 };
+const PUB_CHARGES = { book_publishing: 200, student_dissertations: 20, other_publishers: 10 };
 const PUB_LABELS  = { book_publishing: 'Book Publishing', student_dissertations: 'Student Dissertation', other_publishers: 'Other Publishers' };
 const ISBN_COST   = 100;
 const STEP_NAMES  = ['Publishing Type','Author Detail','Book / File Upload','Book / Dissertation Details','Payment Summary'];
@@ -965,6 +974,25 @@ function onDesignStatus() {
   showC('undesignedBlock', v==='undesigned');
 }
 
+// ── FRONT COVER UPLOAD POPUP ─────────────────────────────────────
+function onFrontCoverStatus() {
+  const v = document.querySelector('input[name="front_cover"]:checked')?.value;
+  showC('frontCoverUploadPopup', v==='present');
+}
+function hideFrontCoverUpload() {
+  showC('frontCoverUploadPopup', false);
+  const inp = $('frontCoverImg'); if(inp) { inp.value=''; showFN(inp,'frontCoverImgFn'); }
+}
+
+function onBackCoverStatus() {
+  const v = document.querySelector('input[name="back_cover"]:checked')?.value;
+  showC('backCoverUploadPopup', v==='present');
+}
+function hideBackCoverUpload() {
+  showC('backCoverUploadPopup', false);
+  const inp = $('backCoverImg'); if(inp) { inp.value=''; showFN(inp,'backCoverImgFn'); }
+}
+
 // ── FILE TYPE TOGGLE ─────────────────────────────────────────────
 function selFileType(card, grp) {
   const name = card.querySelector('input').name;
@@ -982,13 +1010,29 @@ function selFileType(card, grp) {
 
 // ── SELLING PREF ─────────────────────────────────────────────────
 function onSellPref() {
-  const v = document.querySelector('input[name="selling_pref"]:checked')?.value;
-  showC('hardCopyBlock', v==='interested');
-  if(v!=='interested') showC('addrBlock', false);
+  const pref = document.querySelector('input[name="selling_pref"]:checked')?.value;
+
+  const hardCopyBlock = document.getElementById("hardCopyBlock");
+  const addrBlock = document.getElementById("addrBlock");
+
+  if (pref === "interested") {
+    hardCopyBlock.style.display = "block";
+  } else {
+    hardCopyBlock.style.display = "none";
+    addrBlock.style.display = "none";
+  }
 }
+
 function onShipping() {
-  const v = document.querySelector('input[name="hard_copy_shipping"]:checked')?.value;
-  showC('addrBlock', v==='require_wwp');
+  const shipping = document.querySelector('input[name="hard_copy_shipping"]:checked')?.value;
+
+  const addrBlock = document.getElementById("addrBlock");
+
+  if (shipping === "ship_myself" || shipping === "require_wwp") {
+    addrBlock.style.display = "block";   // ✅ show for BOTH
+  } else {
+    addrBlock.style.display = "none";
+  }
 }
 
 // ── ISBN ─────────────────────────────────────────────────────────
@@ -996,6 +1040,11 @@ function onISBN() {
   const v = document.querySelector('input[name="isbn_opt"]:checked')?.value;
   const msg = $('isbnMsg');
   if(msg) { msg.style.display = v==='buy_wwp' ? 'inline' : 'none'; }
+  showC('isbnInputWrap', v==='present');
+  if(v !== 'present') {
+    showE('e_isbn_number', false);
+    markE('isbnNumber', false);
+  }
   updPayment();
 }
 
@@ -1027,7 +1076,7 @@ function updPayment() {
   const total = pub + dc + isbn;
 
   // Header label
-  $('payLbl').innerHTML = `Book Publishing Charge: <strong>$${pub.toFixed(2)}</strong>`;
+  $('payLbl').innerHTML = `Publishing Charge — ${label}: <strong>$${pub.toFixed(2)}</strong>`;
 
   // Build table rows
   const rows = [];
@@ -1107,20 +1156,35 @@ function validate(step) {
     if(!dd||!ex) ok=false;
 
     if(!isDiss){
-      const tp=gv('totalPages'),bl=gv('bookLang'),bg=$('bookGenre').value;
+      const tp=gv('totalPages'), bl=gv('bookLang'), bg=$('bookGenre')?.value;
+
       const fc=document.querySelector('input[name="front_cover"]:checked')?.value;
       const bc=document.querySelector('input[name="back_cover"]:checked')?.value;
-      const ct=document.querySelector('input[name="cover_type"]:checked')?.value;
-      const bd=$('bookDim').value, sp=gv('suggestedPrice');
+
+      const bdEl = $('bookDim'); const bd = bdEl?.value;
+      const spEl = $('suggestedPrice'); const sp = spEl ? gv('suggestedPrice') : null;
+
       showE('e_tpages',!tp); markE('totalPages',!tp);
       showE('e_lang',!bl);   markE('bookLang',!bl);
       showE('e_genre',!bg);  markE('bookGenre',!bg);
+
       showE('e_fcover',!fc); showE('e_bcover',!bc);
-      showE('e_covertype',!ct); showE('e_dim',!bd); markE('bookDim',!bd);
-      showE('e_price',!sp);  markE('suggestedPrice',!sp);
-      const fcf=$('frontCoverFile').files[0], bcf=$('backCoverFile').files[0];
-      showE('e_fcover_file',!fcf); showE('e_bcover_file',!bcf);
-      if(!tp||!bl||!bg||!fc||!bc||!ct||!bd||!sp||!fcf||!bcf) ok=false;
+
+      if(bdEl) { showE('e_dim',!bd); markE('bookDim',!bd); } else showE('e_dim',false);
+      if(spEl) { showE('e_price',!sp); markE('suggestedPrice',!sp); } else showE('e_price',false);
+
+      const fcf=$('frontCoverImg').files; const fcfOk = fcf && fcf.length;
+      const bcf=$('backCoverImg').files; const bcfOk = bcf && bcf.length;
+      showE('e_frontcover_img', fc==='present' && !fcfOk);
+      showE('e_backcover_img', bc==='present' && !bcfOk);
+
+      if(!tp||!bl||!bg) ok=false;
+      if(bdEl && !bd) ok=false;
+      if(spEl && !sp) ok=false;
+      if(!fc) ok=false;
+      if(!bc) ok=false;
+      if(fc==='present' && !fcfOk) ok=false;
+      if(bc==='present' && !bcfOk) ok=false;
     }
 
     if(isDiss){
@@ -1133,6 +1197,14 @@ function validate(step) {
   if(step===5 && !isDiss){
     const ib=document.querySelector('input[name="isbn_opt"]:checked')?.value;
     showE('e_isbn',!ib); if(!ib) ok=false;
+    if(ib==='present'){
+      const isbn=gv('isbnNumber');
+      showE('e_isbn_number',!isbn); markE('isbnNumber',!isbn);
+      if(!isbn) ok=false;
+    } else {
+      showE('e_isbn_number',false);
+      markE('isbnNumber',false);
+    }
   }
 
   return ok;
@@ -1176,12 +1248,25 @@ async function submitForm() {
   fd.append('back_cover',document.querySelector('input[name="back_cover"]:checked')?.value||'');
   fd.append('front_cover_text',gv('frontCoverTxt'));
   fd.append('back_cover_text',gv('backCoverTxt'));
-  const fcf=$('frontCoverFile').files[0]; if(fcf) fd.append('front_cover_file',fcf);
-  const bcf=$('backCoverFile').files[0]; if(bcf) fd.append('back_cover_file',bcf);
+
+  const fci=$('frontCoverImg');
+  if(fci?.files?.length){
+    for(const f of fci.files){
+      fd.append('front_cover_images[]', f);
+    }
+  }
+
+  const bci=$('backCoverImg');
+  if(bci?.files?.length){
+    for(const f of bci.files){
+      fd.append('back_cover_images[]', f);
+    }
+  }
+
   fd.append('suggested_price',gv('suggestedPrice'));
   fd.append('cover_type',document.querySelector('input[name="cover_type"]:checked')?.value||'');
-  fd.append('color_theme',$('colorTheme').value);
-  fd.append('book_dimension',$('bookDim').value);
+  fd.append('color_theme',$('colorTheme')?.value||'');
+  fd.append('book_dimension',$('bookDim')?.value||'');
   fd.append('disst_tags',gv('disstTags'));
   fd.append('guide_name',gv('guideName'));
   fd.append('university_name',gv('uniName'));
@@ -1190,6 +1275,7 @@ async function submitForm() {
   const dff=$('disstFileIn').files[0]; if(dff) fd.append('disst_file',dff);
   fd.append('design_cost',gv('designCost'));
   fd.append('isbn_option',document.querySelector('input[name="isbn_opt"]:checked')?.value||'');
+  fd.append('isbn_number',gv('isbnNumber'));
 
   // Compute total
   const pub=PUB_CHARGES[type]||200;
@@ -1219,6 +1305,9 @@ async function submitForm() {
 document.addEventListener('DOMContentLoaded',()=>{
   applyTypeUI();
   onDesignStatus(); // default undesigned shown
+  onFrontCoverStatus(); // ensure upload popup is hidden
+  onBackCoverStatus(); // ensure upload popup is hidden
+  onISBN(); // ensure ISBN input and messaging are set
   updPayment();
   showC('undesignedBlock', true); // book publishing default = undesigned
 });

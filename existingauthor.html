@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,7 +36,8 @@ img { display:block; max-width:100%; }
 @keyframes pulse   { 0%,100%{transform:scale(1)} 50%{transform:scale(1.15)} }
 @keyframes slideL  { from{opacity:0;transform:translateX(30px)} to{opacity:1;transform:translateX(0)} }
 
-.container { width:min(1340px,94%); margin:0 auto; }
+.container { width:min(1340px,94%);
+ margin:0 auto; }
 
 /* ══ TOP BAR ══ */
 .top-bar { background:var(--cream); padding:9px 0; border-bottom:1px solid var(--sand); }
@@ -92,7 +92,12 @@ img { display:block; max-width:100%; }
 .mob-nav-toggle { display:none; background:none; border:none; color:var(--white); font-size:1.4rem; cursor:pointer; padding:8px; }
 
 /* ══ HERO ══ */
-.hero { display:grid; grid-template-columns:1.1fr 1fr; min-height:460px; }
+.hero { display:grid;
+ grid-template-columns:1fr 0.7fr;
+
+  min-height:460px;
+padding: 0 80px; 
+ }
 
 
 .hero-left{
@@ -285,284 +290,284 @@ section {
 }
 
 
-body1{
-font-family: Arial, sans-serif;
-margin:0;
-background:#f3f3f3;
+
+/* dropdown container */
+.dropdown {
+  position: relative;
 }
 
-.header1{
-background:#d8c59d;
-text-align:center;
-padding:30px;
-font-size:40px;
-font-weight:bold;
+/* hidden by default */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #0D1B2A;
+  min-width: 180px;
+  box-shadow: 0 5px 15px rgba(255, 244, 244, 0.1);
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
-.container1{
-display:flex;
-max-width:1200px;
-margin:auto;
-padding:40px;
-gap:40px;
+/* dropdown items */
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 15px;
+  color: #ffe7e7;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
-.sidebar{
-width:260px;
+.dropdown-menu li a:hover {
+  background: #545454;
 }
 
-.sidebar button{
-width:100%;
-padding:14px;
-margin-bottom:12px;
-border:none;
-background:#2c271c;
-color:white;
-border-radius:10px;
-cursor:pointer;
-font-size:15px;
+/* show on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
-.sidebar button.active{
-background:#9c8658;
-}
-
-.content{
-flex:1;
-}
-
-.section{
-display:none;
-}
-
-.section.active{
-display:block;
-}
-
-
-
-
-
-.contact-hero{
-background:#d8caa8;
-padding:120px 0;
-}
-
-.contact-container{
-width:1100px;
-margin:auto;
-}
-
-.small-title{
-font-size:14px;
-letter-spacing:2px;
-color:#1c2a36;
-margin-bottom:20px;
-}
-
-.contact-title{
-font-size:52px;
-font-family:serif;
-margin-bottom:20px;
-color:#1c2a36;
-}
-
-.contact-text{
-max-width:600px;
-line-height:1.7;
-color:#2d3b45;
-margin-bottom:30px;
-}
-
-.contact-btn{
-display:inline-block;
-padding:14px 28px;
-background:#2d3b45;
-color:white;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;
-}
-
-.contact-info{
-background:#f2f2f2;
-padding:80px 0;
-}
-
-.contact-grid{
-width:1100px;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:40px;
-}
-
-.contact-card{
-background:#e6e0cc;
-padding:40px;
-border-radius:10px;
-box-shadow:0 10px 20px rgba(0,0,0,0.05);
-}
-
-.contact-card h3{
-margin-top:20px;
-margin-bottom:10px;
-font-size:22px;
-}
-
-.contact-card p{
-color:#444;
-line-height:1.6;
-}
-
-.contact-card strong{
-display:block;
-margin-top:15px;
-}
-
-.icon{
-font-size:28px;
-color:#c48a2a;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Georgia", serif;
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
   background: #f5f5f5;
+  color: #1c2b33;
 }
 
+.container {
+  width: 85%;
+  margin: auto;
+  max-width: 1100px;
+}
+
+/* HERO */
+.hero {
+  background: #e6d6b8;
+  padding: 80px 0;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin: 15px 0;
+}
+
+.subtitle {
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #444;
+}
+
+.desc {
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+/* STEPS */
+.steps {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.steps h2 {
+  font-size: 40px;
+  margin: 10px 0 40px;
+}
+
+.step-box {
+  background: #1f2e36;
+  color: #fff;
+  padding: 30px;
+  margin: 20px 0;
+  border-radius: 12px;
+  position: relative;
+  text-align: left;
+}
+
+.step-number {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  background: #d4b26a;
+  color: #000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.step-box h3 {
+  margin-bottom: 10px;
+}
+
+.step-box ul {
+  padding-left: 20px;
+}
+
+.step-box li {
+  margin: 8px 0;
+}
+
+/* SERVICES */
+.services {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.service-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #1f2e36;
+  color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  flex: 1;
+  min-width: 250px;
+}
+
+/* CTA */
+.cta {
+  background: #e6d6b8;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #1f2e36;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* COMMON */
 .container {
   width: 90%;
   max-width: 1200px;
   margin: auto;
 }
 
-/* ABOUT */
-.section-title {
-  text-align: center;
-  padding: 40px 0;
-  font-size: 32px;
-  background: #d9c7a3;
-}
-
-.about-content {
-  display: flex;
-  gap: 40px;
-  padding: 60px 0;
-  align-items: center;
-}
-
-.about-img img {
-  width: 100%;
-  border-radius: 5px;
-}
-
-.about-img {
-  flex: 1;
-}
-
-.about-text {
-  flex: 1;
-}
-
 .tag {
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 1px;
-  color: #777;
+  color: #2c3e50;
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
-.about-text h3 {
-  font-size: 32px;
-  margin: 10px 0;
-}
-
-.about-text p {
-  color: #555;
-  line-height: 1.6;
-}
-
-/* CTA */
-.cta {
-  background: url('./img/a1.png') center/cover no-repeat;
-  height: 600px;
-  position: relative;
-}
-
-.cta-overlay {
-  background: rgba(0,0,0,0.6);
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.cta-content {
+.center {
+  display: block;
   text-align: center;
-  color: #fff;
-  max-width: 600px;
 }
 
-.cta-content span {
-  font-size: 12px;
-  letter-spacing: 1px;
+/* HERO SECTION */
+.author-hero {
+  background: #d8c9a6;
+  padding: 100px 0;
 }
 
-.cta-content h2 {
-  font-size: 36px;
+.author-hero h1 {
+  font-size: 60px;
   margin: 10px 0;
+  color: #0f1a1f;
+}
+
+.author-hero p {
+  max-width: 700px;
+  color: #2f3e46;
+  line-height: 1.7;
 }
 
 .btn {
   display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: #d9c7a3;
-  color: #000;
+  margin-top: 25px;
+  padding: 14px 25px;
+  background: #2f3e46;
+  color: #fff;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
-/* FEATURES */
-.features {
-  padding: 60px 0;
+/* DASHBOARD */
+.dashboard {
+  background: #f2f2f2;
+  padding: 80px 0;
 }
 
-.grid {
+.title {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 50px;
+}
+
+.dashboard-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
 }
 
-.card {
-  background: #fff;
-  padding: 90px;
-  text-align: center;
-  border: 2px solid #e0d2b0;
-  border-radius: 10px;
+.dash-card {
+  background: #1f2a30;
+  color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  border: 2px solid #d8b96a;
 }
 
-.card .icon {
-  font-size: 30px;
+.dash-card h3 {
+  color: #d8b96a;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #d8b96a;
+  padding-bottom: 10px;
+}
+
+.dash-card ul {
+  padding-left: 20px;
+}
+
+.dash-card li {
   margin-bottom: 10px;
-  color: #c5a86a;
-}
-
-.card h4 {
-  margin: 10px 0;
-}
-
-.card p {
-  font-size: 14px;
-  color: #666;
+  color: #dcdcdc;
 }
 
 /* RESPONSIVE */
-@media(max-width: 768px) {
-  .about-content {
-    flex-direction: column;
+@media (max-width: 768px) {
+  .author-hero h1 {
+    font-size: 36px;
   }
 
-  .grid {
+  .dashboard-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -570,9 +575,6 @@ body {
 </style>
 </head>
 <body>
-
-
-
 
 <!-- ══ TOP BAR ══ -->
 <div class="top-bar">
@@ -637,7 +639,22 @@ body {
         <li><a href="index.html" class="active">HOME</a></li>
         <li><a href="bookstore.html">BOOKSTORE</a></li>
         <li><a href="aboutus.html">ABOUT US</a></li>
-        <li><a href="authors.html">AUTHORS</a></li>
+
+
+
+
+      <li class="dropdown">
+  <a href="authors.html">AUTHORS </a>
+  <ul class="dropdown-menu">
+    <li><a href="./newauthor.html">New Authors</a></li>
+    <li><a href="./existingauthor.html">Existing Authors</a></li>
+    <li><a href="./authorinformation.html">Author Information</a></li>
+  </ul>
+</li>
+
+
+
+
         <li><a href="contact.html">CONTACT US</a></li>
       </ul>
       <a href="register_seller.html" class="publish-link">PUBLISH WITH US</a>
@@ -655,104 +672,163 @@ body {
   <a href="contact.html">Contact Us</a>
   <a href="register_seller.html" style="color:var(--gold)">Publish With Us</a>
 </div>
-</head>
 
 
 
 
-<section class="about">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="author-hero">
+  <div class="container">
+    <span class="tag">A COMMUNITY OF CREATIVES</span>
+    <h1>Welcome, Authors!</h1>
+    <p>
+      We believe every story deserves a platform. That’s why we offer cutting-edge publishing services,
+      a vibrant multi vendor marketplace, and a team dedicated to amplifying your voice.
+    </p>
+    <a href="#" class="btn">EXPLORE DASHBOARD →</a>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="dashboard">
   <div class="container">
 
-    <h2 class="section-title">About Us</h2>
+    <span class="tag center">HQ for All Your Publications</span>
+    <h2 class="title">What is the Author Dashboard?</h2>
 
-    <div class="about-content">
-      
-      <div class="about-img">
-        <img src="./img/about1.jpg" alt="About Image">
-      </div>
+    
+  <p>
+     The Author Dashboard is an exclusive platform designed to help authors manage their publishing journey on World Window Publishing (WWP) with ease. It provides a centralized hub where authors can publish new books, manage their existing works, track sales and revenue, and access essential support. Whether you're an independent author, a researcher, or an academic, the dashboard simplifies the process of managing your books and earnings while keeping you updated on your sales performance.
+    </p>
+     
 
-      <div class="about-text">
-        <span class="tag">DISCOVER THE WORLD THROUGH BOOKS</span>
-        <h3>What It Means to Be a Part of World Window Publishing</h3>
+       
 
-        <p>
-          At World Window Publishing, we are more than just a publishing company—we're creating a movement where stories come alive.
-        </p>
+     
+ 
 
-        <p>
-          We believe books are windows to new worlds. Whether you're an author or a reader, you're part of something bigger.
-        </p>
-
-        <p>
-          Our team is united by a love for storytelling and a belief in its power to transform lives.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-
-<section class="cta">
-  <div class="cta-overlay">
-    <div class="cta-content">
-      <span>CALLING ALL CREATORS, DREAMERS, AND STORYTELLERS!</span>
-      <h2>Join the Movement to Redefine Publishing</h2>
-      <p>
-        We’re looking for passionate creators who believe in the power of books to inspire and connect.
-      </p>
-      <a href="./register_seller.html" class="btn">Publish With Us</a>
     </div>
   </div>
 </section>
 
 
-<section class="features">
+
+
+
+
+<section class="dashboard">
   <div class="container">
 
-    <div class="grid">
-      
-      <div class="card">
-        <div class="icon">❤</div>
-        <h4>Passion for Storytelling</h4>
-        <p>We believe storytelling inspires and transforms lives.</p>
+    <span class="tag center">PUBLISH WITH THE WWP ADVANTAGE</span>
+    <h2 class="title">What’s Inside the Author Dashboard?</h2>
+
+    <div class="dashboard-grid">
+
+      <div class="dash-card">
+        <h3>Manage Your Books</h3>
+        <ul>
+          <li>Access all published & unpublished books</li>
+          <li>View status, pricing & performance</li>
+          <li>Edit book details & cover images</li>
+          <li>Unpublish or update listings</li>
+        </ul>
       </div>
 
-      <div class="card">
-        <div class="icon">📖</div>
-        <h4>Books Without Barriers</h4>
-        <p>Making books available anytime, anywhere.</p>
+      <div class="dash-card">
+        <h3>Publish New Books</h3>
+        <ul>
+          <li>Submit books for publication</li>
+          <li>Upload files & cover images</li>
+          <li>Track approval status</li>
+          <li>Get editorial feedback</li>
+        </ul>
       </div>
 
-      <div class="card">
-        <div class="icon">⚙</div>
-        <h4>Strength in Collaboration</h4>
-        <p>Authors and readers grow together.</p>
+      <div class="dash-card">
+        <h3>Track Your Sales</h3>
+        <ul>
+          <li>Monitor total books sold</li>
+          <li>View revenue insights</li>
+          <li>Monthly sales reports</li>
+          <li>Transaction history access</li>
+        </ul>
       </div>
 
-      <div class="card">
-        <div class="icon">💡</div>
-        <h4>Innovation with Purpose</h4>
-        <p>Modern publishing with timeless values.</p>
-      </div>
-
-      <div class="card">
-        <div class="icon">⭐</div>
-        <h4>Commitment to Excellence</h4>
-        <p>Delivering high-quality service and content.</p>
-      </div>
-
-      <div class="card">
-        <div class="icon">🌍</div>
-        <h4>Cultural & Global Impact</h4>
-        <p>Connecting readers worldwide.</p>
+      <div class="dash-card">
+        <h3>Manage Your Revenue</h3>
+        <ul>
+          <li>Check total earnings</li>
+          <li>View withdrawable balance</li>
+          <li>Track withdrawals</li>
+          <li>Payout history logs</li>
+        </ul>
       </div>
 
     </div>
-
   </div>
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="author-hero">
+  <div class="container">
+ 
+    <h1>Need Help?</h1>
+    <p>
+     Get assistance with publishing, payments, or technical issues. If you encounter any issues or have questions, our support team is here to help. Reach out via our Contact Page or visit the Author Support section in your dashboard.
+    </p>
+    <a href="#" class="btn">CONTACT US →</a>
+  </div>
+</section>
+
 
 
 

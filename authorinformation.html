@@ -325,8 +325,10 @@ section {
   background: #545454;
 }
 
-/* show on hover */
-.dropdown:hover .dropdown-menu {
+/* show on hover or when a child receives focus (keyboard/tab navigation or click) */
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu,
+.dropdown-menu:hover {
   display: block;
 }
 
@@ -531,6 +533,121 @@ max-height:200px;
 .wwp-faq-item.active .wwp-faq-icon{
 transform:rotate(180deg);
 }
+.wwp-section{
+  background:#f4f4f4;
+  padding:80px 20px;
+  font-family: "Georgia", serif;
+}
+
+.wwp-container{
+  max-width:1200px;
+  margin:auto;
+  margin-bottom:80px;
+}
+
+.wwp-title{
+  text-align:center;
+  font-size:42px;
+  margin-bottom:40px;
+  color:#1e2a34;
+}
+
+.wwp-subtitle{
+  text-align:center;
+  letter-spacing:1px;
+  font-size:14px;
+  color:#666;
+  margin-bottom:10px;
+}
+
+.wwp-card-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:60px;
+}
+
+.wwp-card-grid.two{
+  grid-template-columns:repeat(2,1fr);
+}
+
+.wwp-card{
+  background:#1f2b36;
+  color:#fff;
+  padding:60px;
+  border-radius:12px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+.wwp-card h3{
+  margin-bottom:15px;
+  font-size:22px;
+  color:#e5c06b;
+}
+
+.wwp-card p{
+  line-height:1.6;
+  font-size:15px;
+}
+
+.wwp-card ul{
+  padding-left:18px;
+}
+
+.wwp-card li{
+  margin-bottom:10px;
+  font-size:15px;
+}
+
+.wwp-badge{
+  background:#e5c06b;
+  color:#000;
+  font-size:12px;
+  padding:4px 8px;
+  border-radius:4px;
+  margin-left:8px;
+}
+
+.wwp-note{
+  background:#1f2b36;
+  color:white;
+  padding:60px;
+  border-radius:10px;
+  margin-top:60px;
+}
+
+.wwp-note ul{
+  padding-left:18px;
+  margin-top:10px;
+}
+
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.wwp-card-grid{
+grid-template-columns:1fr;
+}
+
+.wwp-card-grid.two{
+grid-template-columns:1fr;
+}
+
+.wwp-title{
+font-size:32px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
 
 </style>
 </head>
@@ -657,6 +774,107 @@ transform:rotate(180deg);
     </p>
   </div>
 </section>
+
+
+
+
+
+<section class="wwp-section">
+
+  <!-- Publishing Options -->
+  <div class="wwp-container">
+    <p class="wwp-subtitle">CHOOSE WHAT SUITS YOU</p>
+    <h2 class="wwp-title">Your Publishing Options</h2>
+
+    <div class="wwp-card-grid">
+      <div class="wwp-card">
+        <h3>Book Publishing</h3>
+        <p>
+          Ideal for authors looking to publish their books whether the manuscript
+          is fully designed or still in progress. World Window Publishing supports both.
+        </p>
+      </div>
+
+      <div class="wwp-card">
+        <h3>Dissertation Publishing</h3>
+        <p>
+          Designed for students who want to publish their academic dissertations
+          and share their research with a global audience.
+        </p>
+      </div>
+
+      <div class="wwp-card">
+        <h3>Other Publishers</h3>
+        <p>
+          For publishing houses that want to distribute and promote their books
+          through World Window Publishing's platform and bookstore.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Upload Section -->
+  <div class="wwp-container">
+    <p class="wwp-subtitle">CHOOSE YOUR PREFERRED METHOD</p>
+    <h2 class="wwp-title">How To Upload Your Work?</h2>
+
+    <div class="wwp-card-grid two">
+
+      <div class="wwp-card">
+        <h3>Upload File Link <span class="wwp-badge">Recommended</span></h3>
+        <ul>
+          <li>Use any cloud storage service like Google Drive, OneDrive, Dropbox, or Mega.</li>
+          <li>Ensure your link is publicly accessible or shared with proper permissions.</li>
+          <li>Paste the direct file link in the upload form during submission.</li>
+        </ul>
+      </div>
+
+      <div class="wwp-card">
+        <h3>Upload File Directly</h3>
+        <ul>
+          <li>Accepted file formats: .pdf or .doc</li>
+          <li>Maximum file size: 50MB</li>
+          <li>Ensure the document is properly formatted before uploading.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="wwp-note">
+      <strong>Note:</strong>
+      <ul>
+        <li>We recommend using a cloud storage link to avoid file size restrictions.</li>
+        <li>Please ensure the file you submit is your final version.</li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- FAQ -->
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
